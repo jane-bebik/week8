@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" spacing="10" alignment="center" fx:controller="com.example.week8.Controller">
+    <Button text="Add Student" onAction="#addStudent"/>
+    <Button text="Display Students in HashSet" onAction="#displayStudentsInSet"/>
+    <Button text="Display Students in TreeSet" onAction="#displayStudentsInTreeSet"/>
+    <Button text="Pop Last Student" onAction="#popLastStudent"/>
+    <TextArea fx:id="outputArea" prefHeight="200" prefWidth="300"/>
+</VBox>
