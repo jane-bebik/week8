@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
 <VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" spacing="10" alignment="center" fx:controller="com.example.week8.Controller">
+    <Label text="Enter Student Details" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+    <HBox spacing="10" alignment="center">
+        <Label text="ID:" />
+        <TextField fx:id="idField" promptText="Enter ID" prefWidth="100" />
+    </HBox>
+
+    <HBox spacing="10" alignment="center">
+        <Label text="Name:" />
+        <TextField fx:id="nameField" promptText="Enter Name" prefWidth="200" />
+    </HBox>
+
+    <HBox spacing="10" alignment="center">
+        <Label text="Email:" />
+        <TextField fx:id="emailField" promptText="Enter Email" prefWidth="200" />
+    </HBox>
+
     <Button text="Add Student" onAction="#addStudent"/>
     <Button text="Display Students in HashSet" onAction="#displayStudentsInSet"/>
     <Button text="Display Students in TreeSet" onAction="#displayStudentsInTreeSet"/>
     <Button text="Pop Last Student" onAction="#popLastStudent"/>
-    <TextArea fx:id="outputArea" prefHeight="200" prefWidth="300"/>
+
+    <TextArea fx:id="outputArea" prefHeight="200" prefWidth="300" wrapText="true"/>
 </VBox>

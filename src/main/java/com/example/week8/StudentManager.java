@@ -13,10 +13,21 @@ public class StudentManager {
         studentSet = new HashSet<>();
         studentTreeSet = new TreeSet<>((s1, s2) -> s1.getName().compareTo(s2.getName()));
         studentStack = new Stack<>();
+
+        // Adding sample students
+        addSampleStudent(new Student(1, "John Doe", "john@example.com"));
+        addSampleStudent(new Student(2, "Jane Smith", "jane@example.com"));
+        addSampleStudent(new Student(3, "Alice Johnson", "alice@example.com"));
+        addSampleStudent(new Student(4, "Bob Brown", "bob@example.com"));
+    }
+
+    private void addSampleStudent(Student student) {
+        studentSet.add(student);
+        studentTreeSet.add(student);
+        studentStack.push(student);
     }
 
     public boolean addStudent(Student student) {
-        // Add student to HashSet and treeSet
         boolean addedToSet = studentSet.add(student);
         boolean addedToTreeSet = studentTreeSet.add(student);
         if (addedToSet && addedToTreeSet) {
@@ -34,8 +45,8 @@ public class StudentManager {
     public TreeSet<Student> getStudentsInTreeSet() {
         return studentTreeSet;
     }
+
     public Student popLastStudent() {
-        // Return the last student added, or null if the stack is empty
         return studentStack.isEmpty() ? null : studentStack.pop();
     }
 }
