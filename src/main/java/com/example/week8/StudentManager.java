@@ -34,7 +34,6 @@ public class StudentManager {
     public TreeSet<Student> getStudentsInTreeSet() {
         return studentTreeSet;
     }
-
     public Student popLastStudent() {
         // Return the last student added, or null if the stack is empty
         return studentStack.isEmpty() ? null : studentStack.pop();
